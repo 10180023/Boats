@@ -1,0 +1,41 @@
+﻿<Window x:Class="BoatsProject.WindowEditUsers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BoatsProject"
+        mc:Ignorable="d"
+        Title="WindowEditUsers" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <Rectangle Grid.Row="0" Fill="#FF009FDA"/>
+        <Image Source="Img/logo.png" Margin="0,0,675,10"/>
+        
+        <DataGrid Name="dgUsers" Width="500" Height="300" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" AutoGenerateColumns="False" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Логин" Width="1*" Binding="{Binding Login}"/>
+                <DataGridTextColumn Header="Пароль" Width="1*" Binding="{Binding Password}"/>
+                <DataGridTextColumn Header="Роль" Width="1*" Binding="{Binding Role}"/>
+
+                <DataGridTemplateColumn Width="1*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Button Name="btnEdit" Content="Edit" Click="btnEdit_Click"/>
+                                <Button Name="btnDel" Content="Del" Click="btnDel_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="Back" Content="Назад" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="120" Click="Back_Click" Background="#FF004165" Foreground="White" Height="40"/>
+        <Label Content="Управление пользователями" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Foreground="White" FontSize="21"/>
+
+    </Grid>
+</Window>

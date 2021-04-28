@@ -1,0 +1,25 @@
+﻿<Window x:Class="BoatsProject.WindowAdminMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BoatsProject"
+        mc:Ignorable="d"
+        Title="WindowAdminMenu" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <Rectangle Grid.Row="0" Fill="#FF009FDA"/>
+        <Image Source="Img/logo.png" Margin="0,0,675,10"/>
+        
+        <Button Name="btnUsers" Content="Пользователи" HorizontalAlignment="Center" Margin="200,100,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Click="btnUsers_Click" Height="40" Foreground="White" Background="#FF004165"/>
+        <Button Name="Products" Content="Продукция" HorizontalAlignment="Center" Margin="0,100,200,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Click="Products_Click" Height="40" Foreground="White" Background="#FF004165"/>
+        <Label Content="Меню администратора" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" FontSize="21" Foreground="White"/>
+
+
+
+    </Grid>
+</Window>
